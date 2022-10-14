@@ -1,5 +1,5 @@
 {
-  "name": "waiterfetch",
+  "name": "scheduledfetch",
   "version": "0.0.1",
   "description": "A wrapper around fetch for scheduling request and caching in local (Capacitor preference) each last response",
   "main": "index.js",

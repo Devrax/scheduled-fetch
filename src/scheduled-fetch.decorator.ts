@@ -1,7 +1,7 @@
 import { Preferences } from '@capacitor/preferences';
 import { BehaviorSubject } from 'rxjs';
 
-function waiterFetchDecorator(fn: unknown) {
+function scheduledFetchDecorator(fn: unknown) {
 
     let setIntervalRef: any, obs = new BehaviorSubject<null | any>(null);
     const cacher = new Map(),
@@ -59,8 +59,8 @@ function waiterFetchDecorator(fn: unknown) {
 
 }
 
-const decoratedFetch = waiterFetchDecorator(fetch);
+const scheduleFetch = scheduledFetchDecorator(fetch);
 
 export {
-    decoratedFetch
+    scheduleFetch
 }
